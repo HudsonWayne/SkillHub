@@ -22,6 +22,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('skills.api.urls')),  # REST API for skills
+    path("api/auth/", include("users.api.urls")),
 ]
 
 if settings.DEBUG:
